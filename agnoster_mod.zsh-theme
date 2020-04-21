@@ -27,6 +27,7 @@
 typeset -aHg AGNOSTER_PROMPT_SEGMENTS=(
     prompt_status
     prompt_context
+    prompt_transition
     prompt_virtualenv
     prompt_dir
     prompt_git
@@ -116,6 +117,7 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
+  #CURRENT_BG=NONE
   prompt_segment blue $PRIMARY_FG ' %~ '
 }
 
@@ -130,9 +132,16 @@ prompt_status() {
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}$LIGHTNING"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}$GEAR"
 
-  [[ -n "$symbols" ]] && prompt_segment $PRIMARY_FG default " $symbols "
+  [[ -n "$symbols" ]] && prompt_segment 8 default " $symbols "
+  # the '8' in the prev line represents color code
+  # https://jonasjacek.github.io/colors/
+  
+  emojis=("🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🚦" "🌙")
+  RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
+  
+  [[ -n "$symbols" ]] || prompt_segment blue default "${emojis[$RAND_EMOJI_N]}"
+  
 }
-
 # Display current virtual environment
 prompt_virtualenv() {
   if [[ -n $VIRTUAL_ENV ]]; then
