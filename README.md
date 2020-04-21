@@ -14,7 +14,7 @@ this mod fixes this by using gray(%F{8}) ,the 9th color in xterm-256color palate
 see https://jonasjacek.github.io/colors/ for details of xterm-256color palate.
 
 In the same time, this mod added a random emoji to the begining of prompt when no prompt_status is in effect,
-based on @biigpongsatorn 's work [this link](https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-470603968)
+based on @biigpongsatorn 's  [work](https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-470603968)
 
 emoji list:("🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🚦" "🌙")
 
