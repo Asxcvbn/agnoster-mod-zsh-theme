@@ -6,15 +6,17 @@ the PROMPTs using black color  wrongly treated as transparent, creating a VERY u
 
 ![before mod](prev.png)
 
-this mod fixes this by using gray(8) ,the 9th color in xterm-256color palate.
+this mod fixes this by using gray(%F{8}) ,the 9th color in xterm-256color palate.
 
 ![after mod](after.png)
 
-```
-%F{8}
-```
+
 see https://jonasjacek.github.io/colors/ for details of xterm-256color palate.
 
+In the same time, this mod added a random emoji to the begining of prompt when no prompt_status is in effect,
+based on @biigpongsatorn 's work [this link](https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-470603968)
+
+emoji list:("🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🚦" "🌙")
 
 # agnoster.zsh-theme
 
