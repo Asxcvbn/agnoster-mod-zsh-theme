@@ -1,16 +1,19 @@
 # agnoster_mod.zsh-theme
 
 Modded agnoster.zsh-theme for:
-In Windows Terminal, zsh in wsl, 
-and for Windows Terminal config, value of key "acrylicOpacity" less than 1 ,
-the PROMPTs using black color  wrongly treated as transparent,
-creating a VERY ugly black triangle.
+In Windows Terminal, zsh in wsl, and for Windows Terminal config, value of key "acrylicOpacity" less than 1 ,
+the PROMPTs using black color  wrongly treated as transparent, creating a VERY ugly black triangle.
+
+![before mod](prev.png)
 
 this mod fixes this by using gray(8) ,the 9th color in xterm-256color palate.
+
+![after mod](after.png)
+
 ```
 %F{8}
 ```
-see https://jonasjacek.github.io/colors/ for details
+see https://jonasjacek.github.io/colors/ for details of xterm-256color palate.
 
 
 # agnoster.zsh-theme
