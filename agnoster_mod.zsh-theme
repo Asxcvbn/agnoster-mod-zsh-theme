@@ -78,6 +78,7 @@ prompt_end() {
     print -n "%{%k%}"
   fi
   print -n "%{%f%}"
+  echo -n "%-40(l:\n%{%K{$CURRENT_BG}%f%}--$SEGMENT_SEPARATOR%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR :)"
   CURRENT_BG=''
 }
 
